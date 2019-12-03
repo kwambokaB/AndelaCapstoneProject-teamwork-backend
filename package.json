@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend/issues"
   },
-  "homepage": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend#readme"
+  "homepage": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
