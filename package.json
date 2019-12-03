@@ -1,0 +1,30 @@
+{
+  "name": "andelacapstoneproject-teamwork-backend",
+  "version": "1.0.0",
+  "description": "this is an internal social networking product that provides a platform for employees within an organization to interact with one another and share articles and gifs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgesql",
+    "travis",
+    "ci",
+    "articles",
+    "gifs",
+    "cloudinary",
+    "mocha-tests"
+  ],
+  "author": "kwambokaB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend/issues"
+  },
+  "homepage": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend#readme"
+}
