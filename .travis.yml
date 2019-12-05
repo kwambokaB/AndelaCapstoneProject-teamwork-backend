@@ -7,7 +7,7 @@ notifications:
   email: false
 
 env:
-  global: CODECLIMATE_REPO_TOKEN=ebaf917ebaca6a9e0b89bb0f0d56ef66ac62b6ffb15c70fd683600ec9a5fb5f6
+  global: CC_TEST_REPORTER_ID=ebaf917ebaca6a9e0b89bb0f0d56ef66ac62b6ffb15c70fd683600ec9a5fb5f6
   
 install:
   - npm install
@@ -17,10 +17,12 @@ test:
 
 services:
   - postgresql
+
 before-script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+
 script:
   - npm run coverage
 

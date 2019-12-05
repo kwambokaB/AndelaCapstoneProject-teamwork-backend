@@ -49,6 +49,7 @@
         "pg": "^7.14.0"
     },
     "devDependencies": {
+        "@babel/polyfill": "^7.7.0",
         "chai": "^4.2.0",
         "chai-http": "^4.3.0",
         "coveralls": "^3.0.9",
