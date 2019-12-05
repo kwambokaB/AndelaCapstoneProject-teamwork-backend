@@ -1,0 +1,31 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+notifications:
+  email: false
+
+env:
+  global: CODECLIMATE_REPO_TOKEN=ebaf917ebaca6a9e0b89bb0f0d56ef66ac62b6ffb15c70fd683600ec9a5fb5f6
+  
+install:
+  - npm install
+
+test:
+  - npm run test
+
+services:
+  - postgresql
+
+
+script:
+  - npm run coverage
+
+after_success:
+  - npm run coverage
+  - npm install codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/lcov.info
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

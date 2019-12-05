@@ -4,7 +4,10 @@
   "description": "this is an internal social networking product that provides a platform for employees within an organization to interact with one another and share articles and gifs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "coveralls-coverage": "coveralls < lcov.info",
+    "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
+    "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage"
   },
   "repository": {
     "type": "git",
@@ -28,8 +31,21 @@
   },
   "homepage": "https://github.com/kwambokaB/AndelaCapstoneProject-teamwork-backend#readme",
   "dependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "express": "^4.17.1",
+    "nyc": "^14.1.1",
     "pg": "^7.14.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.9"
   }
 }
