@@ -4,7 +4,7 @@
     "description": "this is an internal social networking product that provides a platform for employees within an organization to interact with one another and share articles and gifs",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "mocha ./src/tests/*.js --require @babel/register --timeout 50000 --exit || true",
         "coveralls-coverage": "coveralls < lcov.info",
         "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
         "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",
@@ -48,6 +48,9 @@
         "pg": "^7.14.0"
     },
     "devDependencies": {
-        "coveralls": "^3.0.9"
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "coveralls": "^3.0.9",
+        "mocha": "^6.2.2"
     }
 }

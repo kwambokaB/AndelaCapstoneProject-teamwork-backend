@@ -16,6 +16,11 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.get('/', (req, res) => res.status(200).json({
+  status: 'success',
+  data: { message: 'Welcome to Teamwork APP! Lets have some fun!' }
+}));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
