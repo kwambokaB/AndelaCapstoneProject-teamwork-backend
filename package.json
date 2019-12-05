@@ -5,6 +5,7 @@
     "main": "server.js",
     "scripts": {
         "test": "mocha ./src/tests/*.js --require @babel/register --timeout 50000 --exit || true",
+        "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
         "coveralls-coverage": "coveralls < lcov.info",
         "codeclimate-coverage": "codeclimate-test-reporter < lcov.info",
         "coverage": "nyc npm run test && npm run generate-lcov && npm run coveralls-coverage && npm run codeclimate-coverage",

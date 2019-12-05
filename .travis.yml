@@ -17,8 +17,8 @@ test:
 
 services:
   - postgresql
-
-
+before-script:
+  - psql -c "CREATE DATABASE dev_teamworkdb;" -U postgres
 script:
   - npm run coverage
 
