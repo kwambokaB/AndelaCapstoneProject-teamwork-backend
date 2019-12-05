@@ -16,7 +16,7 @@ describe('Test Suite For Entry File Endpoints', () => {
         .end((err, res) => {
           res.status.should.be.eql(200);
           res.body.status.should.be.eql('success');
-          res.body.data.message.should.be.eql('Welcome to Teamwork App! lets have some fun');
+          res.body.data.message.should.be.eql('Welcome to Teamwork APP! Lets have some fun!');
           done();
         });
     });
